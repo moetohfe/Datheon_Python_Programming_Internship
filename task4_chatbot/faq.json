@@ -1,0 +1,59 @@
+{
+  "bot_name": "ShopBot",
+  "intents": [
+    {
+      "name": "greeting",
+      "patterns": ["\\b(hi|hello|hey|good (morning|afternoon|evening))\\b"],
+      "responses": ["Hello! I'm ShopBot. How can I help you today?", "Hi there! Ask me about hours, shipping, returns or products."]
+    },
+    {
+      "name": "hours",
+      "patterns": ["\\b(hours?|open|close[sd]?|opening|timings?)\\b"],
+      "responses": ["We're open Monday-Friday 9am-6pm and Saturday 10am-4pm. We're closed on Sundays."]
+    },
+    {
+      "name": "location",
+      "patterns": ["\\b(where|location|address|located|store)\\b"],
+      "responses": ["Our store is at 123 Main Street. We also ship anywhere in the country."]
+    },
+    {
+      "name": "shipping",
+      "patterns": ["\\b(ship(ping)?|deliver(y)?|arrive|track(ing)?)\\b"],
+      "responses": ["Standard shipping takes 3-5 business days and is free on orders over $50. You'll get a tracking link by email."]
+    },
+    {
+      "name": "returns",
+      "patterns": ["\\b(return|refund|exchange|money back)\\b"],
+      "responses": ["You can return any unused item within 30 days for a full refund. Just bring your receipt or order number."]
+    },
+    {
+      "name": "payment",
+      "patterns": ["\\b(pay(ment)?|card|credit|debit|paypal|cash)\\b"],
+      "responses": ["We accept credit and debit cards, PayPal and cash in store."]
+    },
+    {
+      "name": "products",
+      "patterns": ["\\b(products?|sell|items?|laptops?|phones?|headphones?|catalog)\\b"],
+      "responses": ["We sell laptops, phones, headphones and accessories. Ask about a specific item and I'll tell you more!"]
+    },
+    {
+      "name": "price",
+      "patterns": ["\\b(price|cost|how much|cheap|expensive|discount|sale)\\b"],
+      "responses": ["Prices vary by product. Right now we have 15% off all headphones!"]
+    },
+    {
+      "name": "contact",
+      "patterns": ["\\b(contact|phone number|email|call|human|agent|support)\\b"],
+      "responses": ["You can reach a human at support@shopbot.example or call (555) 123-4567 during business hours."]
+    },
+    {
+      "name": "thanks",
+      "patterns": ["\\b(thanks|thank you|thx|appreciate)\\b"],
+      "responses": ["You're welcome! Anything else I can help with?"]
+    }
+  ],
+  "fallback": [
+    "Sorry, I didn't quite get that. You can ask about hours, location, shipping, returns, payment, products or prices.",
+    "Hmm, I'm not sure about that one. Try rephrasing, or type 'help' to see what I can do."
+  ]
+}
